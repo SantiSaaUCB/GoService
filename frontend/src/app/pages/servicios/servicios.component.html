@@ -1,0 +1,15 @@
+<h1>Servicios Disponibles</h1>
+
+<div class="servicio-grid">
+  <div *ngFor="let servicio of servicios" class="tarjeta">
+    <h2>{{ servicio.titulo }}</h2>
+    <p><strong>Categoría:</strong> {{ servicio.categoria }}</p>
+    <p><strong>Descripción:</strong> {{ servicio.descripcion }}</p>
+    <p><strong>Ubicación:</strong> {{ servicio.ubicacion }}</p>
+
+    <div class="botones">
+      <button>Buscar</button>
+      <button>Ofrecer</button>
+    </div>
+  </div>
+</div>
