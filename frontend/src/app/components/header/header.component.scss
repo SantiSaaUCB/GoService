@@ -1,5 +1,5 @@
 .header {
-  background: linear-gradient(90deg, #1abc9c, #16a085);
+  background: linear-gradient(135deg, #00b3b3 0%, #008f8f 100%);
   color: white;
   display: flex;
   justify-content: space-between;
@@ -20,6 +20,6 @@
   }
 
   nav a:hover {
-    text-decoration: underline;
+    text-decoration: none;
   }
 }
