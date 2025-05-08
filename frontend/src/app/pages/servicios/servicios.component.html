@@ -2,14 +2,18 @@
 
 <div class="servicio-grid">
   <div *ngFor="let servicio of servicios" class="tarjeta">
+    <img
+      [src]="getIcon(servicio.categoria, 'blanco')"
+      alt="Icono {{ servicio.categoria }}"
+      class="icono-servicio"
+    />
     <h2>{{ servicio.titulo }}</h2>
-    <p><strong>Categoría:</strong> {{ servicio.categoria }}</p>
-    <p><strong>Descripción:</strong> {{ servicio.descripcion }}</p>
-    <p><strong>Ubicación:</strong> {{ servicio.ubicacion }}</p>
-
+    <div class="contenido">
+      <p><strong>Descripción:</strong> {{ servicio.descripcion }}</p>
+    </div>
     <div class="botones">
-      <button>Buscar</button>
-      <button>Ofrecer</button>
+      <button (click)="onBuscar()">Buscar</button>
+      <button (click)="onOfrecer()">Ofrecer</button>
     </div>
   </div>
 </div>

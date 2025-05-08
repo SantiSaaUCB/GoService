@@ -1,5 +1,80 @@
 .contenido {
-  min-height: 80vh;
-  padding: 2rem;
-  background: #f0fdfc;
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    padding: 0 2rem;
+    background: linear-gradient(135deg, #00b3b3 0%, #008f8f 100%);
+    text-align: center;
+    color: white;
+  }
+
+  .titulo-principal {
+    font-size: 4rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .btn-quienes {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: white;
+    color: #00b3b3;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  .btn-quienes:hover {
+    background: #e0f7f7;
+  }
+
+  .quienes-somos {
+    min-height: 100vh;
+    margin: 6rem auto 4rem;
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    align-content: center;
+
+    h2 {
+      font-size: 3rem;
+      margin: 0 0 1.5rem 2rem;
+      text-align: left;
+    }
+
+    .quienes-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 4rem;
+    }
+
+    .quienes-text {
+      flex: 1 1 300px;
+      margin-left: 0;
+      margin-right: 2rem;
+      text-align: left;
+
+      p {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        text-align: justify;
+        margin: 0 0 1.5rem;
+        color: #333;
+      }
+    }
+
+    .quienes-imagen {
+      flex: 1 1 300px;
+      text-align: center;
+
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 0.5rem;
+      }
+    }
+  }
 }

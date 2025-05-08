@@ -1,0 +1,13 @@
+<div class="rol-selector">
+  <h2>¿Qué rol tienes?</h2>
+
+  <div class="botonera" *ngIf="mode === 'login'">
+    <button (click)="irALogin('buscador')">Buscador</button>
+    <button (click)="irALogin('ofertante')">Ofertante</button>
+  </div>
+
+  <div class="botonera" *ngIf="mode === 'register'">
+    <button (click)="irARegister('buscador')">Buscador</button>
+    <button (click)="irARegister('ofertante')">Ofertante</button>
+  </div>
+</div>

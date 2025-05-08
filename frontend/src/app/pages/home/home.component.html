@@ -1,7 +1,30 @@
 <app-header></app-header>
 
 <main class="contenido">
-  <app-servicios></app-servicios>
+  <section class="hero">
+    <h1 class="titulo-principal">GoService</h1>
+    <a href="#quienes-somos" class="btn-quienes">¿Quiénes somos?</a>
+  </section>
+
+  <section id="quienes-somos" class="quienes-somos">
+    <div class="quienes-container">
+      <div class="quienes-text">
+        <h2>¿Quiénes somos?</h2>
+        <p>
+          En GoService somos una plataforma diseñada para conectar a personas que buscan servicios con proveedores confiables. 
+          Ofrecemos opciones de cuidado de niños, mascotas y adultos, así como asistencia con recados y mantenimiento del hogar. 
+          Nuestra misión es facilitar la vida de nuestros usuarios ofreciendo un espacio seguro, claro y fácil de usar, tanto desde la web como desde nuestra futura app móvil.
+        </p>
+      </div>
+      <div class="quienes-imagen">
+        <img src="assets/images/quienes-somos.png" alt="Imagen Quiénes Somos">
+      </div>
+    </div>
+  </section>
+
+  <section id="servicios" class="servicios">
+    <app-servicios></app-servicios>
+  </section>
 </main>
 
 <app-footer></app-footer>

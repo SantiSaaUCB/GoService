@@ -1,22 +1,44 @@
 .header {
-  background: linear-gradient(135deg, #00b3b3 0%, #008f8f 100%);
+  background: linear-gradient(135deg, #007a7a 0%, #005f5f 100%);
   color: white;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  padding: 1rem 2rem;
   align-items: center;
+  padding: 1rem 2rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+  }
+
+  .logo-icon {
+    width: 100px;
+    height: auto;
+    margin-right: 1rem;
+  }
 
   .logo {
     font-size: 1.5rem;
     font-weight: bold;
   }
 
+  nav {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+
   nav a {
     color: white;
-    margin-left: 1rem;
     text-decoration: none;
     font-weight: 500;
+    white-space: nowrap;
   }
 
   nav a:hover {

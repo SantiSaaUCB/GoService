@@ -1,22 +1,22 @@
-// -----------------------------
-// Estilos del grid de tarjetas
-// -----------------------------
+h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin: 3rem 0 2rem;
+}
+
 .servicio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  gap: 2.5rem;
   padding: 2rem;
-  margin: 0 auto;          // centra el grid horizontalmente
-  max-width: 1280px;       // evita que se extienda demasiado en pantallas muy grandes
-  justify-items: center;   // centra cada tarjeta en su celda
+  margin: 0 auto;
+  max-width: 1280px;
+  justify-items: center;
 }
 
-// -----------------------------
-// Estilos de cada tarjeta
-// -----------------------------
 .tarjeta {
   width: 100%;
-  max-width: 340px;        // ancho máximo para uniformidad
+  max-width: 340px;
   background: linear-gradient(135deg, #00b3b3 0%, #008f8f 100%);
   border-radius: 1rem;
   padding: 1.8rem;
@@ -25,52 +25,48 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 1rem 0;          // separación vertical entre filas
 
   &:hover {
     transform: translateY(-6px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
   }
 
-  // -----------------------------
-  // Encabezado centrado
-  // -----------------------------
+  .icono-servicio {
+    width: 60px;
+    height: auto;
+    margin: 0 auto 1rem;
+  }
+
   h2 {
-    font-size: 1.85rem;
-    margin: 0 0 1rem;
+    font-size: 1.9rem;
+    margin-bottom: 1rem;
     text-align: center;
     color: #fff;
     line-height: 1.2;
   }
 
-  // -----------------------------
-  // Contenido interno
-  // -----------------------------
   .contenido {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 0.6rem;           // más separación entre párrafos
+    gap: 0.8rem;
+
+    p {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.9);
+      margin: 0;
+    }
   }
 
-  p {
-    font-size: 0.95rem;
-    line-height: 1.4;
-    color: rgba(255, 255, 255, 0.9);
-    margin: 0;
-  }
-
-  // -----------------------------
-  // Botonera centrada y uniforme
-  // -----------------------------
   .botones {
     display: flex;
-    gap: 0.5rem;
-    margin-top: 1.5rem;
+    justify-content: space-between;
+    margin-top: 1.8rem;
 
     button {
-      flex: 1;
-      padding: 0.8rem 0;
+      width: 48%;
+      padding: 0.9rem 0;
       background: transparent;
       border: 2px solid rgba(255, 255, 255, 0.9);
       border-radius: 0.5rem;
