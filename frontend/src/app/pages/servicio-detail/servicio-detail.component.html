@@ -1,1 +1,18 @@
-<p>servicio-detail works!</p>
+<h2>Ofertas para: {{ categoria }}</h2>
+
+<div *ngIf="loading">Cargando ofertas…</div>
+<div *ngIf="!loading && errorMsg" class="text-danger">{{ errorMsg }}</div>
+<div *ngIf="!loading && ofertas.length === 0">No hay ofertas para esta categoría.</div>
+
+<div class="cards" *ngIf="!loading && ofertas.length">
+  <div class="card" *ngFor="let oferta of ofertas">
+    <h3>{{ oferta.nombre }} {{ oferta.apellido }}</h3>
+    <p><strong>CI:</strong> {{ oferta.ci }}</p>
+    <p><strong>Ubicación:</strong> {{ oferta.ubicacion }}</p>
+    <p><strong>Teléfono:</strong> {{ oferta.telefono }}</p>
+    <p><strong>Redes Sociales:</strong> {{ oferta.redesSociales }}</p>
+    <p><strong>Experiencia:</strong> {{ oferta.experiencia }}</p>
+    <p><strong>Precio:</strong> {{ oferta.precio }}</p>
+    <p><strong>Otros:</strong> {{ oferta.otros }}</p>
+  </div>
+</div>

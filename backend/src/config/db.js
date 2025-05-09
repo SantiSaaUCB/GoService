@@ -2,9 +2,9 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 dotenv.config();
 
-const atlasUri = process.env.MONGODB_URI;
+const atlasUri = "mongodb+srv://Santi:21Santi03Saa04@cluster0.7o0uh.mongodb.net/goservice?retryWrites=true&w=majority&appName=Cluster0";
 const localUri = process.env.MONGODB_LOCAL_URI || 'mongodb://127.0.0.1:27017/GoServiceDB';
-const uri = process.env.NODE_ENV === 'production' ? atlasUri : localUri;
+const uri = atlasUri;
 
 const conectarDB = async () => {
   try {

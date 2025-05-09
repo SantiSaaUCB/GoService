@@ -20,5 +20,5 @@ app.use('/api/auth', usuarioRoutes);
 app.use('/api/servicios', servicioRoutes);
 app.use('/api/ofertas', ofertaRoutes);
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8088;
 app.listen(PORT, () => console.log(`Servidor corriendo en puerto ${PORT}`));

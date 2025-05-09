@@ -8,7 +8,7 @@ interface PerfilResponse {
 
 @Injectable({ providedIn: 'root' })
 export class ApiService {
-  private baseUrl = 'http://localhost:5000/api'
+  private baseUrl = 'http://localhost:8088/api'
 
   constructor(private http: HttpClient) {}
 

@@ -23,7 +23,7 @@
   <h2>Servicios Disponibles</h2>
   <div class="cards">
     <ng-container *ngIf="!loading && servicios.length; else loadingOrError">
-      <div class="card" *ngFor="let servicio of servicios">
+      <div class="card" *ngFor="let servicio of servicios" (click)="navegarADetalle(servicio.categoria)">
         <img [src]="getIcon(servicio)" alt="{{ servicio.categoria }}" class="card-icon">
         <h3>{{ servicio.nombre }}</h3>
         <p class="categoria">{{ servicio.categoria }}</p>

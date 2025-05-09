@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core'
 import { CommonModule } from '@angular/common'
-import { RouterLink } from '@angular/router'
+import { RouterLink, Router } from '@angular/router'
 import { ServicioService } from '../../services/servicio.service'
 
 @Component({
@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
   loading = true
   errorMsg = ''
 
-  constructor(private servicioService: ServicioService) {}
+  constructor(private servicioService: ServicioService, private router: Router) {}
 
   ngOnInit(): void {
     this.servicios = []
@@ -35,6 +35,10 @@ export class HomeComponent implements OnInit {
         this.loading = false
       }
     })
+  }
+
+  navegarADetalle(categoria: string): void {
+    this.router.navigate(['/servicio-dem', categoria]); // Navegar programáticamente
   }
 
   private calcIcon(categoria: string|null|undefined): string {
