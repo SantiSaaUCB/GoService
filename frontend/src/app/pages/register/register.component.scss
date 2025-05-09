@@ -1,37 +1,58 @@
-:host {
-  display: block;
-  padding: 3rem 2rem;
-  background-color: #f4fdfd;
-  color: #1b1b1b;
+.login-container {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
 
   h2 {
-    color: #007b8a;
-    margin-bottom: 1rem;
+    color: #007b8f;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
   }
 
   form {
-    max-width: 400px;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
 
-    input, button {
-      padding: 0.75rem;
-      font-size: 1rem;
-      border-radius: 6px;
+    label {
+      text-align: left;
+      margin-bottom: 0.25rem;
+      font-weight: 600;
+      color: #007b8f;
+    }
+
+    input {
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
       border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    .error {
+      color: #e74c3c;
+      font-size: 0.875rem;
+      margin-top: -0.75rem;
+      margin-bottom: 0.75rem;
+      text-align: left;
     }
 
     button {
-      background-color: #00c2cb;
+      background: #00b7c2;
       color: white;
       border: none;
-      font-weight: 600;
+      padding: 0.75rem;
+      font-size: 1rem;
+      border-radius: 10px;
       cursor: pointer;
+      transition: background 0.3s;
 
       &:hover {
-        background-color: #009aa6;
+        background: #009ba7;
       }
     }
   }

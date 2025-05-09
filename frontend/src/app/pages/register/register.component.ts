@@ -1,13 +1,25 @@
-import { Component }    from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common'
 
 @Component({
-  standalone: true,
-  imports: [RouterModule],
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.scss']
+  styleUrls: ['./register.component.scss'],
+  imports: [CommonModule]
 })
 export class RegisterComponent {
-  // tu lógica de registro
+  error = '';
+
+  constructor(private router: Router) {}
+
+  onSubmit(name: string, email: string, password: string): void {
+    if (!name || !email || !password) {
+      this.error = 'Todos los campos son obligatorios.';
+    } else {
+      this.error = '';
+      // Simulación de registro exitoso
+      this.router.navigate(['/']);
+    }
+  }
 }
