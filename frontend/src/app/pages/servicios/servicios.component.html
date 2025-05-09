@@ -1,8 +1,26 @@
-<h2 class="servicios-titulo">Servicios Disponibles</h2>
-<div class="servicios-grid">
-  <div *ngFor="let servicio of servicios" class="servicio-card">
-    <h3>{{ servicio.nombre }}</h3>
-    <p>{{ servicio.descripcion }}</p>
-    <a [routerLink]="['/servicio', servicio.id]">Ver detalles</a>
+<form [formGroup]="ofertaForm" (ngSubmit)="onSubmit()">
+  <div *ngFor="let campo of ofertaForm.controls | keyvalue : keepOriginalOrder">
+    
+    <label>{{ campo.key | titlecase }}:</label>
+    
+    <!-- Si el campo es 'categoria', usar un select -->
+    <ng-container *ngIf="campo.key === 'categoria'; else inputTemplate">
+      <select [formControlName]="campo.key" class="form-control">
+        <option value="">Seleccione una categoría</option>
+        <option *ngFor="let cat of categorias" [value]="cat">{{ cat }}</option>
+      </select>
+    </ng-container>
+
+    <!-- Template para los demás campos -->
+    <ng-template #inputTemplate>
+      <input [formControlName]="campo.key" class="form-control" />
+    </ng-template>
+
+    <!-- Validación -->
+    <div *ngIf="enviado && campo.value.invalid" class="text-danger">
+      Este campo es obligatorio.
+    </div>
   </div>
-</div>
+
+  <button type="submit" class="btn btn-primary mt-3">Enviar Oferta</button>
+</form>
