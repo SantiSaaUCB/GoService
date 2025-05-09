@@ -1,38 +1,63 @@
-.servicios-titulo {
-  text-align: center;
-  font-size: 4vw;
-  margin: 4vh 0;
-  color: #007b8a;
+/* estilos para servicios.component.scss */
+:host {
+  display: block;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
 }
 
-.servicios-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 2vw;
-  padding: 0 4vw 8vh;
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
 
-  .servicio-card {
-    background: linear-gradient(to bottom right, #00c2cb, #009aa6);
-    padding: 2rem;
-    border-radius: 14px;
-    color: white;
+.form-control {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.2s;
 
-    h3 {
-      font-size: 1.4rem;
-      margin-bottom: 1vh;
-    }
+  &:focus {
+    outline: none;
+    border-color: #007b8a;
+    box-shadow: 0 0 0 2px rgba(0, 124, 138, 0.2);
+  }
+}
 
-    p {
-      margin-bottom: 2vh;
-    }
+label {
+  font-weight: 600;
+  color: #007b8a;
+  margin-bottom: 0.3rem;
+}
 
-    a {
-      color: white;
-      text-decoration: underline;
+.text-danger {
+  color: #c00;
+  font-size: 0.875rem;
+  margin-top: 0.3rem;
+}
 
-      &:hover {
-        text-decoration: none;
-      }
-    }
+button[type="submit"] {
+  align-self: flex-start;
+  background-color: #00c2cb;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+
+  &:hover {
+    background-color: #009aa6;
+    transform: translateY(-2px);
+  }
+
+  &:disabled {
+    background-color: #a0dcdc;
+    cursor: not-allowed;
+    transform: none;
   }
 }

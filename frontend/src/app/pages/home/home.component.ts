@@ -43,10 +43,13 @@ export class HomeComponent implements OnInit {
 
   private calcIcon(categoria: string|null|undefined): string {
     const key = (categoria ?? '').toLowerCase()
-    if (key.includes('mascota'))       return '/assets/icons/icono-cuidado-de-mascotas-azul.png'
-    if (key.includes('niño') || key.includes('nino')) return '/assets/icons/icono-cuidado-de-niños-azul.png'
-    if (key.includes('adulto'))        return '/assets/icons/icono-cuidado-de-adultos-azul.png'
-    return '/assets/icons/icono-goservice-azul.png'
+    if (key.includes('mascota'))       return '/assets/icons/icono-cuidado-de-mascotas-blanco.png'
+    if (key.includes('niño') || key.includes('nino')) return '/assets/icons/icono-cuidado-de-niños-blanco.png'
+    if (key.includes('adulto'))        return '/assets/icons/icono-cuidado-de-adultos-blanco.png'
+    if (key.includes('recados'))        return '/assets/icons/icono-recados-blanco.png'
+    if (key.includes('casas'))        return '/assets/icons/icono-cuidado-de-casas-blanco.png'
+    if (key.includes('otro'))        return '/assets/icons/icono-otro-blanco.png'
+    return '/assets/icons/icono-goservice-blanco.png'
   }
 
   getIcon(servicio: any): string {

@@ -94,10 +94,19 @@
       border-radius: 14px;
       padding: 2rem;
       color: white;
+      font-size: x-large;
+      text-align: center;
+      align-content: center;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      transition: transform 0.5s, box-shadow 0.5s;
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      }
     }
+    
   }
 
   .btn-secondary {
