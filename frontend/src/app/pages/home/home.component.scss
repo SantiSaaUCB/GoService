@@ -1,127 +1,118 @@
-$header-height: 60px;
-$footer-height: 60px;
-
 .home-banner {
-  min-height: calc(100vh - #{$header-height});
+  background: linear-gradient(to bottom right, #00c2cb, #007b8a);
+  color: white;
+  min-height: 100vh;
+  padding: 8vh 4vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  background: #256d63;
+  align-items: center;
 
-  h1 {
-    font-size: 6rem;
-    margin-bottom: 1rem;
-    font-weight: 300;
+ h1 {
+    font-size: clamp(2.5rem, 10vw, 4rem); // Tamaño que escala y nunca baja de 2.5rem ni sube de 4rem
+    font-weight: 700;
+    text-align: center;
   }
+
   p {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
+    font-size: 2.5vw;
+    margin-bottom: 3vh;
   }
+
   .btn-cta {
-    padding: 0.75rem 1.5rem;
+    background-color: white;
+    color: #007b8a;
+    font-weight: 600;
+    padding: 1em 2em;
     font-size: 1rem;
-    border-radius: 0.5rem;
-    text-decoration: none;
-    background: #007bff;
-    color: #fff;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #d0f3f6;
+    }
   }
 }
 
 .quienes-somos {
-  min-height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding: 2rem;
-  gap: 2rem;
   flex-wrap: wrap;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 6vh 4vw;
+  gap: 4vw;
+  background-color: #effafa;
 
   .quienes-text {
-    flex: 1 1 300px;
-    max-width: 500px;
+    flex: 1 1 45%;
+    max-width: 600px;
+
     h2 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      font-weight: 300;
-      letter-spacing: 1px;
-      text-align: center;
+      font-size: 4vw;
+      margin-bottom: 2vh;
+      color: #007b8a;
     }
+
     p {
-      font-size: 1rem;
+      font-size: 1.2rem;
       line-height: 1.6;
-      color: #555;
-      text-align: center;
     }
   }
 
   .quienes-imagen {
-    flex: 1 1 300px;
+    flex: 1 1 40%;
     max-width: 400px;
+
     img {
       width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 0.5rem;
+      border-radius: 12px;
     }
   }
 }
 
 .servicios-preview {
-  min-height: calc(100vh - #{$footer-height});
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 3rem 1rem;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  color: #333;
+  background-color: #effafa;
+  padding: 8vh 4vw;
+  min-height: 100vh;
 
   h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    font-weight: 300;
-    letter-spacing: 1px;
+    color: #007b8a;
+    font-size: 4vw;
+    text-align: center;
+    margin-bottom: 4vh;
   }
 
   .cards {
     display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    width: 100%;
-    max-width: 1200px;
-    margin-bottom: 2rem;
-    justify-items: center;
-  }
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2vw;
 
-  .card {
-    padding: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 0.5rem;
-    background: #fff;
-    text-align: center;
-    width: 100%;
-    max-width: 200px;
-    font-weight: 300;
-    transition: box-shadow 0.3s ease;
-
-    &:hover {
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    .card-icon {
-      width: 40px;
-      height: 40px;
-      margin-bottom: 0.5rem;
+    .card {
+      background: linear-gradient(to bottom right, #00c2cb, #009aa6);
+      border-radius: 14px;
+      padding: 2rem;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
   }
 
   .btn-secondary {
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    border: 1px solid #007bff;
-    border-radius: 0.5rem;
-    color: #007bff;
+    margin: 5vh auto 0;
+    background-color: #00c2cb;
+    color: white;
+    padding: 0.9rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    display: block;
+    width: max-content;
+
+    &:hover {
+      background-color: #009aa6;
+    }
   }
 }

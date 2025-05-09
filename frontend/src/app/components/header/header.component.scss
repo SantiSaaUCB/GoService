@@ -1,50 +1,53 @@
 .header {
+  background-color: #007b8a;
+  color: #ffffff;
+  padding: 2vh 4vw;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: #e6f7f2;
-  flex-wrap: wrap;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.header__logo {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-
-.header__logo-icon {
-  width: 100px;
-  height: auto;
-  margin-right: 0.75rem;
-}
-
-.header__title {
-  font-size: 3rem;
-  color: #256d63;
-  font-weight: 600;
-}
-
-.header__nav {
-  display: flex;
   gap: 1rem;
-}
 
-.btn {
-  background-color: #28a295;
-  color: #ffffff;
-  border: none;
-  border-radius: 0.5rem;
-  padding: 0.5rem 1.25rem;
-  font-size: 1rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-}
+  .logo-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 0.8rem;
+    flex: 1 1 auto;
 
-.btn:hover {
-  background-color: #1f7d6f;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    .header__logo-icon {
+      width: 100px;
+      max-width: 100px;
+      height: 100px;
+    }
+
+    .logo {
+      font-size: 4vw;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+
+    .btn {
+      background-color: #00c2cb;
+      color: white;
+      padding: 0.6em 1.2em;
+      font-size: 1rem;
+      border-radius: 6px;
+      border: none;
+      font-weight: 500;
+      flex: 0 0 auto;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #009aa6;
+      }
+    }
+  }
 }

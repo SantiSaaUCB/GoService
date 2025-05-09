@@ -1,0 +1,38 @@
+:host {
+  display: block;
+  padding: 3rem 2rem;
+  background-color: #f4fdfd;
+  color: #1b1b1b;
+
+  h2 {
+    color: #007b8a;
+    margin-bottom: 1rem;
+  }
+
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    input, button {
+      padding: 0.75rem;
+      font-size: 1rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: #00c2cb;
+      color: white;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #009aa6;
+      }
+    }
+  }
+}
