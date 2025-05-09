@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component, inject } from '@angular/core'
+import { Router } from '@angular/router'
 
 @Component({
-  standalone: true,
   selector: 'app-header',
-  imports: [RouterLink],
+  standalone: true,
+  imports: [],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  public router = inject(Router)
+}

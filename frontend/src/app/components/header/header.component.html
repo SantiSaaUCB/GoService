@@ -1,11 +1,11 @@
 <header class="header">
-  <div class="logo-container">
-    <img src="assets/images/icono-goservice-blanco.png" alt="Icono GoService" class="logo-icon">
-    <div class="logo">GoService</div>
+  <div class="logo-container" (click)="router.navigate([''])">
+    <img src="assets/icons/icono-goservice-azul.png" alt="Icono GoService" class="header__logo-icon">
+    <span class="logo">GoService</span>
   </div>
   <nav>
-    <a routerLink="/rol-selector">Iniciar Sesión</a>
-    <a routerLink="/rol-selector">Registrarte</a>
-    <a href="#servicios">Ver Servicios</a>
+    <button class="btn" (click)="router.navigate(['login'])">Iniciar Sesión</button>
+    <button class="btn" (click)="router.navigate(['register'])">Registrarse</button>
+    <button class="btn" (click)="router.navigate(['servicios'])">Ver Servicios</button>
   </nav>
 </header>

@@ -1,26 +1,17 @@
-// src/app/services/servicio.service.ts
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Injectable, inject } from '@angular/core'
+import { HttpClient } from '@angular/common/http'
+import { Observable } from 'rxjs'
 
-export interface Servicio {
-  titulo: string;
-  descripcion: string;
-  categoria: string;
-  ubicacion: string;
-  _id?: string;
-  createdAt?: string;
-}
-
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable({ providedIn: 'root' })
 export class ServicioService {
-  private API_URL = 'https://goservice-covi.onrender.com/api/servicios';
+  private http = inject(HttpClient)
+  private baseUrl = 'http://localhost:5000/api'
 
-  constructor(private http: HttpClient) {}
+  getServicios(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.baseUrl}/servicios`)
+  }
 
-  getServicios(): Observable<Servicio[]> {
-    return this.http.get<Servicio[]>(this.API_URL);
+  getServicio(id: number | string): Observable<any> {
+    return this.http.get<any>(`${this.baseUrl}/servicios/${id}`)
   }
 }

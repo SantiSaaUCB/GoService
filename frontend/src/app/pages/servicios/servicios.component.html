@@ -1,19 +1,8 @@
-<h1>Servicios Disponibles</h1>
-
-<div class="servicio-grid">
-  <div *ngFor="let servicio of servicios" class="tarjeta">
-    <img
-      [src]="getIcon(servicio.categoria, 'blanco')"
-      alt="Icono {{ servicio.categoria }}"
-      class="icono-servicio"
-    />
-    <h2>{{ servicio.titulo }}</h2>
-    <div class="contenido">
-      <p><strong>Descripción:</strong> {{ servicio.descripcion }}</p>
-    </div>
-    <div class="botones">
-      <button (click)="onBuscar()">Buscar</button>
-      <button (click)="onOfrecer()">Ofrecer</button>
-    </div>
+<h2 class="servicios-titulo">Servicios Disponibles</h2>
+<div class="servicios-grid">
+  <div *ngFor="let servicio of servicios" class="servicio-card">
+    <h3>{{ servicio.nombre }}</h3>
+    <p>{{ servicio.descripcion }}</p>
+    <a [routerLink]="['/servicio', servicio.id]">Ver detalles</a>
   </div>
 </div>

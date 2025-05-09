@@ -1,80 +1,127 @@
-.contenido {
-  .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 80vh;
-    padding: 0 2rem;
-    background: linear-gradient(135deg, #00b3b3 0%, #008f8f 100%);
-    text-align: center;
-    color: white;
-  }
+$header-height: 60px;
+$footer-height: 60px;
 
-  .titulo-principal {
-    font-size: 4rem;
-    margin-bottom: 2.5rem;
-  }
+.home-banner {
+  min-height: calc(100vh - #{$header-height});
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #256d63;
 
-  .btn-quienes {
-    display: inline-block;
+  h1 {
+    font-size: 6rem;
+    margin-bottom: 1rem;
+    font-weight: 300;
+  }
+  p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  .btn-cta {
     padding: 0.75rem 1.5rem;
-    background: white;
-    color: #00b3b3;
+    font-size: 1rem;
     border-radius: 0.5rem;
-    font-weight: 600;
     text-decoration: none;
-    transition: background 0.3s, color 0.3s;
+    background: #007bff;
+    color: #fff;
   }
+}
 
-  .btn-quienes:hover {
-    background: #e0f7f7;
-  }
+.quienes-somos {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
 
-  .quienes-somos {
-    min-height: 100vh;
-    margin: 6rem auto 4rem;
-    padding: 4rem 2rem;
-    max-width: 1200px;
-    align-content: center;
-
+  .quienes-text {
+    flex: 1 1 300px;
+    max-width: 500px;
     h2 {
       font-size: 3rem;
-      margin: 0 0 1.5rem 2rem;
-      text-align: left;
-    }
-
-    .quienes-container {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      gap: 4rem;
-    }
-
-    .quienes-text {
-      flex: 1 1 300px;
-      margin-left: 0;
-      margin-right: 2rem;
-      text-align: left;
-
-      p {
-        font-size: 1.2rem;
-        line-height: 1.8;
-        text-align: justify;
-        margin: 0 0 1.5rem;
-        color: #333;
-      }
-    }
-
-    .quienes-imagen {
-      flex: 1 1 300px;
+      margin-bottom: 1rem;
+      font-weight: 300;
+      letter-spacing: 1px;
       text-align: center;
-
-      img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 0.5rem;
-      }
     }
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #555;
+      text-align: center;
+    }
+  }
+
+  .quienes-imagen {
+    flex: 1 1 300px;
+    max-width: 400px;
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 0.5rem;
+    }
+  }
+}
+
+.servicios-preview {
+  min-height: calc(100vh - #{$footer-height});
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 3rem 1rem;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: #333;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+
+  .cards {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 2rem;
+    justify-items: center;
+  }
+
+  .card {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    background: #fff;
+    text-align: center;
+    width: 100%;
+    max-width: 200px;
+    font-weight: 300;
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .card-icon {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .btn-secondary {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border: 1px solid #007bff;
+    border-radius: 0.5rem;
+    color: #007bff;
   }
 }
